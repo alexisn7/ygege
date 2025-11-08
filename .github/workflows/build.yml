@@ -112,8 +112,8 @@ jobs:
         run: |
           # Docker Hub manifest
           docker manifest create uwucode/ygege:master \
-            --amend uwucode/ygege@${{ needs.build.outputs.digest-amd64 }} \
-            --amend uwucode/ygege@${{ needs.build.outputs.digest-arm64 }}
+            --amend alexisn72023/ygege@${{ needs.build.outputs.digest-amd64 }} \
+            --amend alexisn72023/ygege@${{ needs.build.outputs.digest-arm64 }}
           docker manifest push uwucode/ygege:master
 
           # GHCR manifest (fixed repo name)
